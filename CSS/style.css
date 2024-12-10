@@ -92,8 +92,8 @@ h2 {
     background-repeat: no-repeat;
     background-position: center center;
     border: 9px groove #ffbc50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), /* Внешняя тень */inset 0 0 5px rgba(0, 0, 0, 0.2); /* Внутренняя тень для глубины */          
-    border-radius: 2px; /* Небольшое скругление, как у деревянной рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.2);         
+    border-radius: 2px;
 }
 
 .baby {
@@ -812,7 +812,7 @@ code {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Черное полупрозрачное затемнение */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -838,15 +838,15 @@ code {
 }
 
 .mainpage__content_title::before {
-    content: ''; /* Обязательно для псевдоэлемента */
-    position: absolute; /* Абсолютное позиционирование относительно заголовка */
-    top: -15%; /* Центрируем круг по вертикали */
-    left: -4%; /* Центрируем круг по горизонтали */
-    width: 150px; /* Диаметр круга */
-    height: 150px; /* Диаметр круга */
-    background-color: rgba(30, 30, 30, 0.5); /* Полупрозрачный серый цвет */
-    border-radius: 50%; /* Превращаем квадрат в круг */
-    z-index: -1; /* Размещаем круг позади текста */
+    content: '';
+    position: absolute;
+    top: -15%;
+    left: -4%;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 50%; 
+    z-index: -1;
     animation: border-transform 10s infinite;
 }
 
@@ -954,7 +954,6 @@ code {
     flex-grow: 1;
     background-color: #0a0a0a;
     color: white;
-    /* text-align: center; */
 }
 
 .contactpage__label {
@@ -1111,14 +1110,14 @@ code {
     text-align: center;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .car-content {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
     .car-content {
         flex-direction: column-reverse;
         row-gap: 30px;
@@ -1126,8 +1125,10 @@ code {
 }
 
 
-/* Avto shop flex*/
-.carshop__container {
+/* Avto shop*/
+
+/* With use FLEX */
+/* .carshop__container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -1144,10 +1145,34 @@ code {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
     flex-basis: calc(100% - 20px);
+} */
+
+/* With use GRID */
+.carshop__container {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    grid-template-columns: repeat(1, 1fr); /* Initial setup for mobile devices */
 }
 
-/* .carshop__block h2, */
-.carshop__block p,
+.carshop__block {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* The same for FLAX and GRID realisation */
+.carshop__block p {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+}
+
 .carshop__block hr {
     margin: 0;
     margin-top: 15px;
@@ -1157,14 +1182,6 @@ code {
     margin: 0;
     font-size: 26px;
     font-weight: 900;
-    font-family: "Open Sans", sans-serif;
-    line-height: 1;
-}
-
-p {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
     font-family: "Open Sans", sans-serif;
     line-height: 1;
 }
@@ -1211,25 +1228,26 @@ p.carshop__block_price {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1440px) {
+/* With use FLEX */
+/* @media screen and (max-width: 1440px) {
     .carshop__block {
         flex-basis: calc(33.333% - 20px);
     }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .carshop__block {
         flex-basis: calc(50% - 20px);
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .carshop__block {
         flex-basis: calc(100% - 20px);
     }
 }
 
-@media (min-width: 1441px) {
+@media screen and (min-width: 1441px) {
     .carshop__block:nth-child(1),
     .carshop__block:nth-child(2),
     .carshop__block:nth-child(3),
@@ -1240,6 +1258,38 @@ p.carshop__block_price {
     .carshop__block:nth-child(5),
     .carshop__block:nth-child(6) {
         flex-basis: calc(50% - 20px);
+    }
+} */
+
+
+/* With use GRID */
+@media screen and (max-width: 1440px) {
+    .carshop__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .carshop__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carshop__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .carshop__container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .carshop__block:nth-child(5),
+    .carshop__block:nth-child(6) {
+        grid-column: span 2;
     }
 }
     
