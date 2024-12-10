@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tire de ma page (onglet)</title>
+	<link
+	  rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+	  integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+	  crossorigin="anonymous"
+	  referrerpolicy="no-referrer"
+	/>
+	<style>
+		th{
+			background: #adadad;
+			padding:16px !important;
+		}
+		td{
+			background: #e1e1e1;
+			padding:16px !important;
+		}
+	</style>
+  	</head>
+  	<body>
+		<iframe src="navigation.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+		<h1 style="text-align:center; margin:20px;">HTML exercices 01 - 05</h1>
+
+		Pour écrire un titre principal, il faut utiliser la balise
+		<xmp><h1></xmp>
+		Exemple : <xmp><h1>Titre principal</h1></xmp>
+
+		Pour écrire un sous-titres, il faut utiliser la balise
+		<xmp><h2>,<h3>,<h4>,<h5>...</xmp>
+		Exemple : <xmp><h2>Sous-titre</h2></xmp>
+
+		Pour écrire du texte, il faut utiliser la balise    
+		<xmp><p></xmp>    
+		Exemple : <xmp><p>Texte</p></xmp>   
+
+		Pour écrire une liste, il faut utiliser la balise
+		<xmp><ul></xmp>
+		Exemple : <xmp><ul><li>Texte</li></ul></xmp>
+
+		Pour écrire une liste non ordonnée, il faut utiliser la balise
+		<xmp><ol></xmp>
+		Exemple : <xmp><ol><li>Texte</li></ol></xmp>
+			
+		Pour écrire une image, il faut utiliser la balise
+		<xmp><img></xmp>
+		Exemple : <xmp><img src="https://via.placeholder.com/150"></xmp>
+		
+		<img src="https://cat-dog.com.ua/image/webp/catalog/blog-pic/mops.jpg.webp" alt="mops" width="300" height="200">
+		<br><br>
+		<img src="img/basset-hound-7861037_1280.jpg" alt="mops" width="300" height="200">
+		<br><br>
+
+		Pour écrire un lien, il faut utiliser la balise
+		<xmp><a></xmp>
+		Exemple : <xmp><a href="https://google.com">Google</a></xmp>
+
+		<ul>
+		<li><a href="https://google.com">Google</a></li>
+		<li><a href="sample.pdf" target="_blank">PDF</a></li>
+		<li><a href="CSS-EX-05.html" target="_blank">CSS-EX-05</a></li>
+		</ul>
+
+		<table>
+			<thead>
+			  <tr>
+				<th>Nom</th>
+				<th>Type de viande</th>
+				<th>Echelle de piquance</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Bicky</td>
+				<td>Boeuf</td>
+				<td>1/10</td>
+			  </tr>
+			  <tr>
+				<td>Bicky fish</td>
+				<td>Poisson</td>
+				<td>1/10</td>
+			  </tr>
+			</tbody>
+		</table>
+		<table>
+			<tr>
+				<td>Cell 1</td>
+				<td>Cell 2</td>
+				<td>Cell 3</td>
+			</tr>
+	
+			<tr>
+				<td colspan="2">Bicky qui prendra deux cellules</td>
+				<td>Boeuf</td>
+			</tr>
+			<tr>
+				<td>Bicky fish</td>
+				<td colspan="2">Poisson</td>
+			</tr>
+		</table>
+
+		<h2>Listes des tâches</h2>
+		<table>
+			<thead>
+			  <tr>
+				<th>Étudiant</th>
+				<th>Lundi</th>
+				<th>Mardi</th>
+				<th>Mercredi</th>
+				<th>Jeudi</th>
+				<th>Vendredi</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Faouzi</td>
+				<td colspan="2">Congé</td>
+				<td>Webdesign</td>
+				<td>Gestion de projet</td>
+				<td>Congé</td>
+			  </tr>
+			  <tr>
+				<td>Arnaud</td>
+				<td>Gestion de projet</td>
+				<td colspan="4">Congé</td>
+			  </tr>
+			  <tr>
+				<td>Sarah</td>
+				<td>Intégration</td>
+				<td colspan="2">Congé</td>
+				<td>Gestion de projet</td>
+				<td>Webdesign</td>
+			  </tr>
+			  <tr>
+				<td>Yasmine</td>
+				<td>Webdesign</td>
+				<td>Congé</td>
+				<td>Intégration</td>
+				<td>Gestion de projet</td>
+				<td>Congé</td>
+			  </tr>
+			  <tr>
+				<td>Jérémie</td>
+				<td colspan="5">Intégration</td>
+			  </tr>
+			</tbody>
+		</table>
+  	</body>
+	<script src="script.js"></script>
+</html>
