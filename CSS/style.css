@@ -1228,7 +1228,7 @@ p.carshop__block_price {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* With use FLEX */
+/* With use FLEX and two big blocks in the second row */
 /* @media screen and (max-width: 1440px) {
     .carshop__block {
         flex-basis: calc(33.333% - 20px);
@@ -1262,7 +1262,7 @@ p.carshop__block_price {
 } */
 
 
-/* With use GRID */
+/* With use GRID and two standart blocks in the second row*/
 @media screen and (max-width: 1440px) {
     .carshop__container {
         grid-template-columns: repeat(3, 1fr);
@@ -1285,11 +1285,6 @@ p.carshop__block_price {
     .carshop__container {
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: auto;
-    }
-
-    .carshop__block:nth-child(5),
-    .carshop__block:nth-child(6) {
-        grid-column: span 2;
     }
 }
     
